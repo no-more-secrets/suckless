@@ -12,14 +12,33 @@ die() {
 patches="$(< patches.txt)"
 
 cd latest
+rm -f *.rej *.orig
+
+git checkout -- config.def.h
 cp config.def.h config.h
 
+echo "patching:"
+
 for p in $patches; do
-  patch -u --dry-run < patch-$p.diff || \
-    die "patch $p failed!"
-  patch -u < patch-$p.diff
-  echo "applied patch: $p."
+  patch -u --silent < patch-$p.diff
+  echo "  applied patch: $p."
+  cp config.h config.def.h
 done
 
-echo
-echo "success."
+git checkout -- config.def.h
+
+set +e
+diff -u config.def.h config.h > config.current.diff
+code=$?
+set -e
+
+case $code in
+  # Success error code means that files are the same, which they
+  # should not be.
+  0) die "config.def.h and config.h are the same, no patching occurred." ;;
+  # diff succeeded and files are different.
+  1) ;;
+  2) die "failed to diff config.def.h and config.h." ;;
+esac
+
+echo "patching succeeded."

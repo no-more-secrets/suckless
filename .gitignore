@@ -6,3 +6,6 @@ config.h
 /dwm/dwm-*/dwm
 /dmenu/dmenu-*/dmenu
 /dmenu/dmenu-*/stest
+
+config.current.diff
+*.swp
