@@ -5,3 +5,4 @@ config.h
 /st/st-*/st
 /dwm/dwm-*/dwm
 /dmenu/dmenu-*/dmenu
+/dmenu/dmenu-*/stest
