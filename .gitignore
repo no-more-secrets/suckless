@@ -1,0 +1,7 @@
+config.h
+
+*.o
+
+/st/st-*/st
+/dwm/dwm-*/dwm
+/dmenu/dmenu-*/dmenu
