@@ -18,7 +18,15 @@ die() {
   exit 1
 }
 
+log() {
+  echo -e "${c_green}info${c_norm}: $@"
+}
+
 patches="$(< patches.txt)"
+
+hostname="$(hostname)"
+[[ ! -z "$hostname" ]] || die "failed to get hostname."
+log "found hostname: $hostname"
 
 cd latest
 rm -f *.rej *.orig
@@ -29,7 +37,13 @@ cp config.def.h config.h
 echo "patching:"
 
 for p in $patches; do
-  patch -u --silent < patch-$p.diff
+  patch_file="patch-$p.diff"
+  hostname_patch_file="patch-$p-hostname-$hostname.diff"
+  if [[ -f "$hostname_patch_file" ]]; then
+    patch_file="$hostname_patch_file"
+    log "using hostname-specific patch file: $hostname_patch_file"
+  fi
+  patch -u --silent < "$patch_file"
   echo "  applied patch: $p."
 done
 
