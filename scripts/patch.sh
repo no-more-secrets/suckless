@@ -22,10 +22,7 @@ echo "patching:"
 for p in $patches; do
   patch -u --silent < patch-$p.diff
   echo "  applied patch: $p."
-  cp config.h config.def.h
 done
-
-git checkout -- config.def.h
 
 set +e
 diff -u config.def.h config.h > config.current.diff

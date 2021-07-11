@@ -1,0 +1,11 @@
+--- config.h	2021-07-11 10:02:17.886830176 -0400
++++ config.h	2021-07-11 10:02:17.854829376 -0400
+@@ -5,7 +5,7 @@
+  *
+  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
+  */
+-static char *font = "Liberation Mono:spacing=100:size=6.4:antialias=true:autohint=true";
++static char *font = "Liberation Mono:spacing=100:size=9.5:antialias=true:autohint=true";
+ static int borderpx = 2;
+ 
+ /*
