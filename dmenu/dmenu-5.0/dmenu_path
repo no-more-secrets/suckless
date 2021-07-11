@@ -5,9 +5,11 @@ cache="$cachedir/dmenu_run"
 
 [ ! -e "$cachedir" ] && mkdir -p "$cachedir"
 
+dir=~/dev/suckless/dmenu/latest
+
 IFS=:
-if stest -dqr -n "$cache" $PATH; then
-	stest -flx $PATH | sort -u | tee "$cache"
+if $dir/stest -dqr -n "$cache" $PATH; then
+	$dir/stest -flx $PATH | sort -u | tee "$cache"
 else
 	cat "$cache"
 fi

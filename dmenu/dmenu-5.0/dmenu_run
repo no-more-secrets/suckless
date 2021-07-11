@@ -1,3 +1,3 @@
 #!/bin/sh
 dir=~/dev/suckless/dmenu/latest
-$dir/dmenu_path | $dir/dmenu "$@" | ${SHELL:-"/bin/sh"} &
+$dir/dmenu_path | $dir/dmenu "$@" | ${SHELL:-"/usr/bin/fish"} &
