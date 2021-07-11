@@ -45,6 +45,8 @@ for p in $patches; do
   fi
   patch -u --silent < "$patch_file"
   echo "  applied patch: $p."
+  ls *.orig &>/dev/null && \
+    die "found *.orig files; something wrong with diff files."
 done
 
 set +e
