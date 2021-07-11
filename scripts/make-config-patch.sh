@@ -1,10 +1,11 @@
 #!/bin/bash
 # ---------------------------------------------------------------
-#                    Suckless Patch Generator
+#               Suckless config.h Patch Generator
 # ---------------------------------------------------------------
-# Suckless patch generator. Essentially this program will take
-# the latest changes to config.h and create a new patch that will
-# apply them (to the existing config.h, not to config.def.h).
+# Suckless config.h patch generator. Essentially this program
+# will take the latest changes to config.h and create a new patch
+# that will apply them (to the existing config.h, not to con-
+# fig.def.h).
 #
 # To use this program to make the next patch:
 #

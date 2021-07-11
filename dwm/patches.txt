@@ -1,3 +1,4 @@
 modkey
 dmenu-term-cmds
 autostart
+restartsig

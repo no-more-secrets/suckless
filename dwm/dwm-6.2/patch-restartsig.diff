@@ -1,0 +1,80 @@
+Adapted from:
+
+  https://dwm.suckless.org/patches/restartsig/dwm-restartsig-20180523-6.2.diff
+
+--- config.h	2021-07-11 13:13:47.101050199 -0400
++++ config.h	2021-07-11 13:13:47.065050187 -0400
+@@ -94,6 +94,7 @@
+ 	TAGKEYS(                        XK_8,                      7)
+ 	TAGKEYS(                        XK_9,                      8)
+ 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
++	{ MODKEY|ControlMask|ShiftMask, XK_q,      quit,           {1} }, 
+ };
+ 
+ /* button definitions */
+--- dwm.c	2021-07-11 13:17:08.041066682 -0400
++++ dwm.c	2021-07-11 13:17:17.705065299 -0400
+@@ -206,6 +206,8 @@
+ static void seturgent(Client *c, int urg);
+ static void showhide(Client *c);
+ static void sigchld(int unused);
++static void sighup(int unused);
++static void sigterm(int unused);
+ static void spawn(const Arg *arg);
+ static void tag(const Arg *arg);
+ static void tagmon(const Arg *arg);
+@@ -261,6 +263,7 @@
+ 	[UnmapNotify] = unmapnotify
+ };
+ static Atom wmatom[WMLast], netatom[NetLast];
++static int restart = 0;
+ static int running = 1;
+ static Cur *cursor[CurLast];
+ static Clr **scheme;
+@@ -1249,6 +1252,7 @@
+ void
+ quit(const Arg *arg)
+ {
++	if(arg->i) restart = 1;
+ 	running = 0;
+ }
+ 
+@@ -1543,6 +1547,9 @@
+ 	/* clean up any zombies immediately */
+ 	sigchld(0);
+ 
++	signal(SIGHUP, sighup);
++	signal(SIGTERM, sigterm);
++
+ 	/* init screen */
+ 	screen = DefaultScreen(dpy);
+ 	sw = DisplayWidth(dpy, screen);
+@@ -1644,6 +1651,20 @@
+ }
+ 
+ void
++sighup(int unused)
++{
++	Arg a = {.i = 1};
++	quit(&a);
++}
++
++void
++sigterm(int unused)
++{
++	Arg a = {.i = 0};
++	quit(&a);
++}
++
++void
+ spawn(const Arg *arg)
+ {
+ 	if (arg->v == dmenucmd)
+@@ -2151,6 +2172,7 @@
+ 	scan();
+ 	runAutostart();
+ 	run();
++	if(restart) execvp(argv[0], argv);
+ 	cleanup();
+ 	XCloseDisplay(dpy);
+ 	return EXIT_SUCCESS;
