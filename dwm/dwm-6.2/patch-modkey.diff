@@ -1,0 +1,11 @@
+--- config.h	2021-07-11 12:04:49.852328184 -0400
++++ config.h	2021-07-11 12:04:49.844327740 -0400
+@@ -44,7 +44,7 @@
+ };
+ 
+ /* key definitions */
+-#define MODKEY Mod1Mask
++#define MODKEY Mod4Mask
+ #define TAGKEYS(KEY,TAG) \
+ 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
+ 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \

@@ -1,1 +1,2 @@
-basic
+modkey
+dmenu-term-cmds
