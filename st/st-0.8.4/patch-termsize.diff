@@ -1,0 +1,13 @@
+--- config.h	2021-07-11 10:19:29.519243002 -0400
++++ config.h	2021-07-11 10:19:29.479242041 -0400
+@@ -147,8 +147,8 @@
+  * Default columns and rows numbers
+  */
+ 
+-static unsigned int cols = 80;
+-static unsigned int rows = 24;
++static unsigned int cols = 160;
++static unsigned int rows = 48;
+ 
+ /*
+  * Default colour and shape of the mouse cursor

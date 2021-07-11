@@ -1,0 +1,11 @@
+--- config.h	2021-07-11 10:15:53.118058040 -0400
++++ config.h	2021-07-11 10:15:53.082057180 -0400
+@@ -91,7 +91,7 @@
+  *
+  *	stty tabs
+  */
+-unsigned int tabspaces = 8;
++unsigned int tabspaces = 2;
+ 
+ /* Terminal colors (16 first used in escape sequence) */
+ static const char *colorname[] = {
