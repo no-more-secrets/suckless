@@ -1,5 +1,5 @@
---- config.h	2021-07-11 10:13:09.846171711 -0400
-+++ config.h	2021-07-11 10:13:09.814170951 -0400
+--- config.h	2021-07-11 09:08:00.604970733 -0400
++++ config.h	2021-07-11 11:16:58.953149349 -0400
 @@ -5,8 +5,8 @@
   *
   * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
@@ -10,3 +10,4 @@
 +static int borderpx = 0;
  
  /*
+  * What program is execed by st depends of these precedence rules:
