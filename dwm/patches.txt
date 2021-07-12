@@ -3,3 +3,4 @@ dmenu-term-cmds
 autostart
 restartsig
 actualfullscreen
+swapquits

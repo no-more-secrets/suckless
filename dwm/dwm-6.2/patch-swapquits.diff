@@ -1,0 +1,15 @@
+This patch will make Meta-Shift-q just restart dwm, while Meta-Ctrl-Shift-q
+exits dwm (swaps them).
+--- config.h	2021-07-12 09:00:59.691179498 -0400
++++ config.h	2021-07-12 09:00:59.647173712 -0400
+@@ -94,8 +94,8 @@
+ 	TAGKEYS(                        XK_7,                      6)
+ 	TAGKEYS(                        XK_8,                      7)
+ 	TAGKEYS(                        XK_9,                      8)
+-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+-	{ MODKEY|ControlMask|ShiftMask, XK_q,      quit,           {1} }, 
++	{ MODKEY|ShiftMask,             XK_q,      quit,           {1} }, /* restart only */
++	{ MODKEY|ControlMask|ShiftMask, XK_q,      quit,           {0} }, /* really quit dwm */
+ };
+ 
+ /* button definitions */
