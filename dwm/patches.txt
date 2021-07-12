@@ -4,3 +4,4 @@ autostart
 restartsig
 actualfullscreen
 swapquits
+font
