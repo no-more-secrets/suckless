@@ -6,7 +6,7 @@
   */
 -static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
 -static int borderpx = 2;
-+static char *font = "Liberation Mono:spacing=95:size=7.8:antialias=true:autohint=true";
++static char *font = "Literation Mono Powerline:spacing=95:size=7.8:antialias=true:autohint=true";
 +static int borderpx = 0;
  
  /*
