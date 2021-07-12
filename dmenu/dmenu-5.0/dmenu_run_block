@@ -1,0 +1,5 @@
+#!/bin/sh
+# Use this one when you want to wait for the command selected by
+# dmenu to finish before this script finishes.
+dir=~/dev/suckless/dmenu/latest
+$dir/dmenu_path | $dir/dmenu "$@" | fish
