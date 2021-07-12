@@ -1,0 +1,13 @@
+--- config.h	2021-07-12 09:13:49.143557423 -0400
++++ config.h	2021-07-12 09:13:49.107557867 -0400
+@@ -5,8 +5,8 @@
+ static const unsigned int snap      = 32;       /* snap pixel */
+ static const int showbar            = 1;        /* 0 means no bar */
+ static const int topbar             = 1;        /* 0 means bottom bar */
+-static const char *fonts[]          = { "monospace:size=10" };
+-static const char dmenufont[]       = "monospace:size=10";
++static const char *fonts[]          = { "Literation Mono Powerline:spacing=0:size=8.2" };
++static const char dmenufont[]       = "Literation Mono Powerline:spacing=0:size=8.2";
+ static const char col_gray1[]       = "#222222";
+ static const char col_gray2[]       = "#444444";
+ static const char col_gray3[]       = "#bbbbbb";
