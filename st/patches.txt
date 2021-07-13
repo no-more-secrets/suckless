@@ -3,3 +3,4 @@ shell
 tabspaces
 gruvbox
 termsize
+anysize
