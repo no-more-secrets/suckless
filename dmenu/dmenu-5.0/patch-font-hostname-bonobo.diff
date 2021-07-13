@@ -5,7 +5,7 @@
  /* -fn option overrides fonts[0]; default X11 font or font set */
  static const char *fonts[] = {
 -	"monospace:size=10"
-+	"Literation Mono Powerline:spacing=100:size=8.0"
++	"Literation Mono Powerline:spacing=95:size=7.0"
  };
  static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
  static const char *colors[SchemeLast][2] = {
