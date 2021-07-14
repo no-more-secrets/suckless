@@ -6,3 +6,4 @@ actualfullscreen
 swapquits
 font
 kbvolctrl
+fullgaps
