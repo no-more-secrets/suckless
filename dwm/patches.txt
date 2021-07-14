@@ -5,3 +5,4 @@ restartsig
 actualfullscreen
 swapquits
 font
+kbvolctrl
