@@ -8,3 +8,4 @@ font
 kbvolctrl
 fullgaps
 mfact-half
+focusadjacenttag
