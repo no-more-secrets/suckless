@@ -10,3 +10,4 @@ fullgaps
 mfact-half
 focusadjacenttag
 nextview-use-ctrlalt
+viewontag
