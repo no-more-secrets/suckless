@@ -1,0 +1,11 @@
+--- config.h	2021-07-15 21:22:15.176091512 -0400
++++ config.h	2021-07-15 21:22:15.136090349 -0400
+@@ -37,7 +37,7 @@
+ };
+ 
+ /* layout(s) */
+-static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
++static const float mfact     = 0.50; /* factor of master area size [0.05..0.95] */
+ static const int nmaster     = 1;    /* number of clients in master area */
+ static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
+ 

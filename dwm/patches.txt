@@ -7,3 +7,4 @@ swapquits
 font
 kbvolctrl
 fullgaps
+mfact-half
