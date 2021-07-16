@@ -9,3 +9,4 @@ kbvolctrl
 fullgaps
 mfact-half
 focusadjacenttag
+nextview-use-ctrlalt
