@@ -2,16 +2,16 @@ Adapted from:
 
   https://dwm.suckless.org/patches/viewontag/dwm-viewontag-20210312-61bb8b2.diff
 
---- config.h	2021-07-16 17:52:28.521440071 -0400
-+++ config.h	2021-07-16 17:52:28.361432393 -0400
-@@ -7,6 +7,7 @@
- static const unsigned int snap      = 32;       /* snap pixel */
- static const int showbar            = 1;        /* 0 means no bar */
- static const int topbar             = 1;        /* 0 means bottom bar */
-+static const Bool viewontag         = True;     /* Switch view on tag switch */
- static const char *fonts[]          = { "Literation Mono Powerline:size=10" };
- static const char dmenufont[]       = "Literation Mono Powerline:size=10";
- static const char col_gray1[]       = "#222222";
+--- config.h	2021-07-18 16:21:24.066341770 -0400
++++ config.h	2021-07-18 16:21:33.726326528 -0400
+@@ -22,6 +22,7 @@
+ static const char *upvol[]   = { "/usr/bin/pulsemixer", "--change-volume", "+5", NULL };
+ static const char *downvol[] = { "/usr/bin/pulsemixer", "--change-volume", "-5", NULL };
+ static const char *mutevol[] = { "/usr/bin/pulsemixer", "--toggle-mute", NULL };
++static const Bool viewontag = True; /* Switch view on tag switch */
+ 
+ /* tagging */
+ static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 --- dwm.c	2021-07-16 17:52:38.681928811 -0400
 +++ dwm.c	2021-07-16 17:57:22.704210211 -0400
 @@ -1705,6 +1705,8 @@
