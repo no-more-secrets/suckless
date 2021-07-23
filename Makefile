@@ -4,7 +4,7 @@ MAKEFLAGS += -s
 # Use this one if you want to see the commands.
 # MAKEFLAGS += --no-print-directory
 
-all: st dwm dmenu
+all: st dwm dmenu surf
 
 st:
 	@/usr/bin/env echo -e "\n=== st =========================================================="
@@ -18,4 +18,8 @@ dmenu:
 	@/usr/bin/env echo -e "\n=== dmenu ======================================================="
 	@cd dmenu && ./make.sh
 
-.PHONY: all st dwm dmenu
+surf:
+	@/usr/bin/env echo -e "\n=== surf ========================================================"
+	@cd surf && ./make.sh
+
+.PHONY: all st dwm dmenu surf
