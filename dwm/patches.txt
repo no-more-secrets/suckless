@@ -11,3 +11,4 @@ mfact-half
 focusadjacenttag
 nextview-use-ctrlalt
 viewontag
+screen-brightness
