@@ -17,6 +17,7 @@ dwm:
 dmenu:
 	@/usr/bin/env echo -e "\n=== dmenu ======================================================="
 	@cd dmenu && ./make.sh
+	@cd ~/bin && rm -f dmenu && ln -s ~/dev/suckless/dmenu/latest/dmenu dmenu
 
 surf:
 	@/usr/bin/env echo -e "\n=== surf ========================================================"
