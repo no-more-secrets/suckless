@@ -12,3 +12,4 @@ focusadjacenttag
 nextview-use-ctrlalt
 viewontag
 screen-brightness
+touchpad-toggle
