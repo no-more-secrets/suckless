@@ -1,0 +1,11 @@
+--- config.h	2022-01-31 22:11:57.679173847 -0500
++++ config.h	2022-01-31 22:11:57.495194748 -0500
+@@ -98,6 +98,8 @@
+ 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+ 	{ ControlMask|Mod1Mask,         XK_Left,   viewtoleft,     {0} }, /* for during transition; change back to MODKEY eventually. */
+ 	{ ControlMask|Mod1Mask,         XK_Right,  viewtoright,    {0} }, /* for during transition; change back to MODKEY eventually. */
++	{ Mod1Mask,                     XK_h,      viewtoleft,     {0} },
++	{ Mod1Mask,                     XK_l,      viewtoright,    {0} },
+ 	{ MODKEY|ShiftMask,             XK_Left,   tagtoleft,      {0} },
+ 	{ MODKEY|ShiftMask,             XK_Right,  tagtoright,     {0} },
+ 	{ MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },

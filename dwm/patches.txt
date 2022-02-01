@@ -16,3 +16,4 @@ touchpad-toggle
 border-zero
 focusonnetactive
 skippy
+alt-h-l-changes-workspaces
